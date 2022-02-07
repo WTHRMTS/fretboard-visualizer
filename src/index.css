@@ -12,7 +12,50 @@ code {
     monospace;
 }
 
+h1 {
+  text-align: center;
+}
+
+.fretBoardMarker {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.root-note-fret {
+  font-size: 1rem;
+  background-color: rgb(231, 9, 9);
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.highlighted-fret {
+  font-size: 1rem;
+  background-color: rgb(9, 187, 231);
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.fret {
+  /* width: 1; */
+  font-size: 1rem;
+  background-color: white;
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
 .fretboard-grid {
+  margin: 5% 10% 5% 10%;
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr)
+  grid-template-columns: repeat(13, 1fr)
+  
 }

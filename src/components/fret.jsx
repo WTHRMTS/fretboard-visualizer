@@ -2,7 +2,7 @@ import React from "react";
 
 function Fret(props) {
     return (
-        <div>
+        <div className={props.className}>
             {props.content}
         </div>
     )
