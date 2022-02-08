@@ -24,30 +24,52 @@ function Fretboard(props) {
     const stringNotes = outputStrings();
 
     return (
-        <div className="fretboard-grid">
-            {/* Note the round brackets on the map callback function below!!! */}
-            {   fretBoardMarkers.map((marker, index) => (
-                <FretBoardMarker key={index} content={fretBoardMarkers[marker]}/>
-            ))
-            }
-            {   stringNotes[0].map((note, index) => (
-                    <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-            ))}
-            {   stringNotes[1].map((note, index) => (
-                    <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-            ))}
-            {  stringNotes[2].map((note, index) => (
-                    <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-            ))}
-            {   stringNotes[3].map((note, index) => (
-                    <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-            ))}
-            {   stringNotes[4].map((note, index) => (
-                    <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-            ))}
-            {   stringNotes[5].map((note, index) => (
-                    <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-            ))}
+        <div>
+            <div className="fretboard-grid">
+                {/* Note the round brackets on the map callback function below!!! */}
+                {   fretBoardMarkers.map((marker, index) => (
+                    <FretBoardMarker key={index} content={fretBoardMarkers[marker]}/>
+                ))
+                }
+            </div>
+            <hr className="horizontal-lines"/>
+            <div className="fretboard-grid">
+                {   stringNotes[0].map((note, index) => (
+                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
+                ))}
+            </div>
+            <hr className="horizontal-lines" />
+            <div className="fretboard-grid">
+                {   stringNotes[1].map((note, index) => (
+                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
+                ))}
+            </div>
+            <hr className="horizontal-lines"/>
+            <div className="fretboard-grid">
+                {  stringNotes[2].map((note, index) => (
+                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
+                ))}
+            </div>
+            <hr className="horizontal-lines"/>
+            <div className="fretboard-grid">
+                {   stringNotes[3].map((note, index) => (
+                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
+                ))}
+            </div>
+            <hr className="horizontal-lines"/>
+            <div className="fretboard-grid">
+                {   stringNotes[4].map((note, index) => (
+                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
+                ))}
+            </div>
+            <hr className="horizontal-lines"/>
+            <div className="fretboard-grid">
+                {   stringNotes[5].map((note, index) => (
+                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
+                ))}
+            </div>
+            <hr className="horizontal-lines"/>
+            
         </div>
     )
 

@@ -9,8 +9,8 @@ function App() {
     const natural = "\u266E"
     const ChromaticScale = [[0, 'C'], [1, 'C'+sharp + '/D'+flat], [2, 'D'], [3, 'D'+sharp+'/E'+flat], [4, 'E'], [5, 'F'], [6, 'F'+ sharp + '/G'+flat], [7, 'G'] ,
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
-    let arr = [0,0,0];
-    const [scaleType, updateNotes] = useState([0 + arr[0], 0 + arr[1], 0 + arr[2]])
+
+    let [scaleType, updateNotes] = useState([0,0,0])
     
     const Scales = ['Major/Ionian', 'Dorian', 'Phyrgian', 'Lydian', 'Mixolydian', 'Aeolian', 'Locrian', 
     'Harmonic Minor', 'Melodic Minor (Ascending)', 'Pentatonic Major', 'Pentatonic Minor', 'Blues Scale']
@@ -51,40 +51,40 @@ function App() {
         }
 
         function HandleClick() {
-            updateNotes((scaleType) => scaleType = arr)
-            console.log(arr)
+            updateNotes(()=> [...scaleType])
+            console.log(scaleType.length)
+            // event.preventDefault();
         }
         
-
         function handleChange(event) {
             let index
-            // event.target.name == "First"? index = 0: event.target.name == "Second"? index = 1 : index = 2;
-            // if (event.target.name == "First") {
-            //     index = 0;
-            // } else 
+            
             if (event.target.name == "Second") {
+                scaleType[0] = 0;
                 index = 1;
             }
             else if (event.target.name == "Third") {
+                scaleType[0] = 0;
                 index = 2;
             }
             else if (event.target.name == "Fourth") {
-                arr[0] = 1;
+                scaleType[0] = 1;
                 index = 1;
             }
             else if (event.target.name = "Fifth") {
-                arr[0] = 1;
+                scaleType[0] = 1;
                 index = 2;
             }
             const dataValue = parseInt(event.target.value);
-            arr[index] = dataValue;
-            console.log(arr)
-                // return arr
+            scaleType[index] = dataValue;
+
+            console.log(scaleType)
+            // event.preventDefault();
         }
 
     return (
         <div>
-            
+            <hr/>
             <h1>
                 Fretboard Visualizer
             </h1>

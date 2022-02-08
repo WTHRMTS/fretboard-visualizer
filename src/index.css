@@ -35,6 +35,7 @@ h3 {
 .fretBoardMarker {
   color: white;
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 5px;
 }
 
@@ -61,7 +62,7 @@ h3 {
 .fret {
   /* width: 1; */
   font-size: 1rem;
-  background-color: lightgray;
+  background-color: rgb(216, 214, 214);
   text-align: center;
   border-color: black;
   border-style: solid;
@@ -70,9 +71,14 @@ h3 {
 }
 
 .fretboard-grid {
-  margin: 5% 10% 5% 10%;
+  margin: 0% 10% 0% 10%;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(13, 1fr)
   
+}
+.horizontal-lines {
+  width: 80%;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
