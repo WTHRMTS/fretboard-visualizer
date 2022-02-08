@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0, 0, 0, 0.875);
 }
 
 code {
@@ -13,10 +14,26 @@ code {
 }
 
 h1 {
+  color: white;
   text-align: center;
 }
 
+h3 {
+  color: white;
+  text-align: center;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  color: white;
+}
+
 .fretBoardMarker {
+  color: white;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -44,7 +61,7 @@ h1 {
 .fret {
   /* width: 1; */
   font-size: 1rem;
-  background-color: white;
+  background-color: lightgray;
   text-align: center;
   border-color: black;
   border-style: solid;
