@@ -13,7 +13,26 @@ code {
     monospace;
 }
 
+.visualiser {
+  margin-top: 50px;
+}
+
+.arpeggio {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
 h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.scale-arpeggio-type {
   color: white;
   text-align: center;
 }
@@ -26,6 +45,7 @@ h3 {
 .input-area {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .label {
@@ -35,7 +55,7 @@ h3 {
 .fretBoardMarker {
   color: white;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 5px;
 }
 
@@ -71,6 +91,7 @@ h3 {
 }
 
 .fretboard-grid {
+  align-content: center;
   margin: 0% 10% 0% 10%;
   width: 80%;
   display: grid;
@@ -78,6 +99,7 @@ h3 {
   
 }
 .horizontal-lines {
+  margin: 0% 10% 0% 10%;
   width: 80%;
   margin-bottom: 0px;
   margin-top: 0px;
