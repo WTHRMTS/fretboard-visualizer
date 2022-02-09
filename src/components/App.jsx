@@ -12,7 +12,7 @@ function App() {
                 <h1>Visualize Scales, Modes and Arpeggios</h1>
                 <p>
                 If you're like me and have a bunch of books lying around which are full of scales and arpeggios but find them too cumbersome 
-                to use (just keeping the right page while your holding a guitar is hard enough), then this site is for you.
+                to use (just keeping the right page open while you're holding a guitar is hard enough), then this site is for you.
                 </p>
                 <p>On this page you can visualize
                 scales such as the Major, Minor or Harmonic Minor (and more), the modes of the Major scale, and all the common arpeggios (Major, Minor, 7th, Diminished 7th etc.)
