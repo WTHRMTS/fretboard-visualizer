@@ -13,6 +13,13 @@ code {
     monospace;
 }
 
+.introduction {
+  text-align: left;
+  color: white;
+  width: 50%;
+  margin: 0% 25%;
+}
+
 .visualiser {
   margin-top: 50px;
 }
@@ -61,9 +68,9 @@ h3 {
 
 .root-note-fret {
   font-size: 1rem;
-  background-color: rgb(231, 9, 9);
+  background-color: rgb(9, 205, 231);
   text-align: center;
-  border-color: black;
+  border-color: rgb(0, 0, 0);
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
@@ -71,7 +78,7 @@ h3 {
 
 .highlighted-fret {
   font-size: 1rem;
-  background-color: rgb(9, 187, 231);
+  background-color: rgb(58, 209, 58);
   text-align: center;
   border-color: black;
   border-style: solid;
