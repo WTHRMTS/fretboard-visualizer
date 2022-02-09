@@ -64,22 +64,22 @@ function ScaleVisualiser() {
                 Scale Visualizer
             </h2>
             <div className="input-area">
-                <select onChange={handleChange} name="First">
+                <select className="select-menu" onChange={handleChange} name="First">
                     {ChromaticScale.map((scale) => ( 
                         <option 
-                        // selected={scale == ChromaticScale[scaleType[0]][1]? "selected" : ""}
+                        className="select-option-root"
                         value={scale[0]}>{scale[1]}
                         </option> 
                      ))}
                 </select>
-                <select onChange={handleChange} name="Second">
+                <select className="select-menu" onChange={handleChange} name="Second">
                     {Scales.map((scale, index) => ( 
-                        <option 
-                        // selected={scale==scaleType[1]? "selected": ""}
+                        <option
+                        className="select-option-scale"
                         value={index}>{scale}</option>
                      ))}
                 </select>
-                <button onClick={HandleClick}>Submit</button>
+                <button className="submit-button" onClick={HandleClick}>Submit</button>
             </div>
                 <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Scales[scaleType[1]]}</h3>
             <Fretboard highlightedNotes={highlightedNotes}/>

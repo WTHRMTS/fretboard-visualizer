@@ -10,7 +10,7 @@ function Fretboard(props) {
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
 
     // Need to change these to text, figure out why map wont work over strings, only empty strings.
-    const fretBoardMarkers = [0, 1,'', 3,'', 5,'', 7,'', 9,'','', 12]
+    const fretBoardMarkers = [0, 1,2, 3,4, 5,6, 7,8, 9,10,11, 12]
 
     function outputStrings() {
         const stringNotes = [[4],[11],[7],[2],[9],[4]]
@@ -25,7 +25,7 @@ function Fretboard(props) {
 
     return (
         <div>
-            <div className="fretboard-grid">
+            <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (
                     <FretBoardMarker key={index} content={fretBoardMarkers[marker]}/>
@@ -33,42 +33,49 @@ function Fretboard(props) {
                 }
             </div>
             <hr className="horizontal-lines"/>
-            <div className="fretboard-grid">
+            <div className="fretboard-grid string">
                 {   stringNotes[0].map((note, index) => (
                         <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
                 ))}
             </div>
             <hr className="horizontal-lines" />
-            <div className="fretboard-grid">
+            <div className="fretboard-grid string">
                 {   stringNotes[1].map((note, index) => (
                         <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
                 ))}
             </div>
             <hr className="horizontal-lines"/>
-            <div className="fretboard-grid">
+            <div className="fretboard-grid string">
                 {  stringNotes[2].map((note, index) => (
                         <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
                 ))}
             </div>
             <hr className="horizontal-lines"/>
-            <div className="fretboard-grid">
+            <div className="fretboard-grid string">
                 {   stringNotes[3].map((note, index) => (
                         <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
                 ))}
             </div>
             <hr className="horizontal-lines"/>
-            <div className="fretboard-grid">
+            <div className="fretboard-grid string">
                 {   stringNotes[4].map((note, index) => (
                         <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
                 ))}
             </div>
             <hr className="horizontal-lines"/>
-            <div className="fretboard-grid">
+            <div className="fretboard-grid string">
                 {   stringNotes[5].map((note, index) => (
                         <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
                 ))}
             </div>
             <hr className="horizontal-lines"/>
+            <div className="fretboard-grid marker">
+                {/* Note the round brackets on the map callback function below!!! */}
+                {   fretBoardMarkers.map((marker, index) => (
+                    <FretBoardMarker key={index} content={fretBoardMarkers[marker]}/>
+                ))
+                }
+            </div>
             
         </div>
     )

@@ -59,20 +59,22 @@ function ArpeggioVisualiser() {
                 Arpeggio Visualizer
             </h2>
             <div className="input-area">
-                <select onChange={handleChange} name="First">
+                <select className="select-menu" onChange={handleChange} name="First">
                     {ChromaticScale.map((scale) => (
-                        <option 
+                        <option
+                        className="select-option-root"
                         value={scale[0]}>{scale[1]}</option>
                      ))}
                 </select>
-                <select onChange={handleChange} name="Second">
+                <select className="select-menu" onChange={handleChange} name="Second">
                     {Arpeggios.map((arpeggio, index) => (
-                        <option 
+                        <option
+                        className="select-option-arpeggio"
                         value={index}>{arpeggio}</option>
                      ))}
                 </select>
                 
-                <button onClick={HandleClick}
+                <button className="submit-button" onClick={HandleClick}
                 >Submit</button>
             </div>
             <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Arpeggios[scaleType[1]]}</h3>
