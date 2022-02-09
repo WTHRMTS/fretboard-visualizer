@@ -41,7 +41,6 @@ function ScaleVisualiser() {
 
         function HandleClick() {
             updateNotes(()=> [...scaleType])
-            console.log(scaleType.length)
         }
         
         function handleChange(event) {
@@ -56,8 +55,6 @@ function ScaleVisualiser() {
             
             const dataValue = parseInt(event.target.value);
             scaleType[index] = dataValue;
-
-            console.log(scaleType)
         }
 
     return (

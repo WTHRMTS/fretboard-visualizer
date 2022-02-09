@@ -35,7 +35,6 @@ function ArpeggioVisualiser() {
 
         function HandleClick() {
             updateNotes(()=> [...scaleType])
-            console.log(scaleType.length)
         }
         
         function handleChange(event) {
@@ -49,8 +48,6 @@ function ArpeggioVisualiser() {
             }
             const dataValue = parseInt(event.target.value);
             scaleType[index] = dataValue;
-
-            console.log(scaleType)
         }
 
     return (
