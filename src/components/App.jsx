@@ -8,7 +8,7 @@ function App() {
 
     return (
         <div>
-            <div class="introduction">
+            <div className="introduction">
                 <h1>Visualize Scales, Modes and Arpeggios</h1>
                 <p>
                 If you're like me and have a bunch of books lying around which are full of scales and arpeggios but find them too cumbersome 
@@ -28,7 +28,7 @@ function App() {
             </div>
             <ScaleVisualiser />
             <ArpeggioVisualiser />
-            <div class="footer">&copy; Jamie Booth 2022</div>
+            <div className="footer">&copy; Jamie Booth 2022</div>
 
         </div>
     )
