@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+#window {
+  margin: auto;
+  width: 830px;
+  overflow-x: scroll;
+}
+
 .introduction {
   text-align: left;
   color: white;
@@ -118,7 +124,6 @@ h3 {
   align-content: center;
   flex-direction: column;
   font-size: 1rem;
-  /* background-color: rgba(238, 235, 235, 0.0); */
   text-align: center;
   border-radius: 20px;
   height: 2rem;
@@ -155,10 +160,10 @@ h3 {
   align-items: center;
   align-content: center;
   margin: auto;
-  width: 800px;
+  width: 1600px;
   height: 2.3rem;
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
+  grid-template-columns: repeat(25, 1fr);
   overflow: hidden;
   grid-gap: 16px;
 }
@@ -169,7 +174,7 @@ h3 {
 
 .horizontal-lines {
   margin: auto;
-  width: 800px;
+  width: 1600px;
   margin-bottom: 0px;
   margin-top: 0px;
 }

@@ -10,12 +10,12 @@ function Fretboard(props) {
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
 
     // Need to change these to text, figure out why map wont work over strings, only empty strings.
-    const fretBoardMarkers = [0, 1,2, 3,4, 5,6, 7,8, 9,10,11, 12]
+    const fretBoardMarkers = [0, 1,2, 3,4, 5,6, 7,8, 9,10,11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
     function outputStrings() {
         const stringNotes = [[4],[11],[7],[2],[9],[4]]
         for (let j = 0; j < 6; j++){
-            for (let i = 1; i< 13; i++) {
+            for (let i = 1; i< 25; i++) {
                 stringNotes[j].push((stringNotes[j][0]+i)%12)
             }
         }
@@ -24,7 +24,7 @@ function Fretboard(props) {
     const stringNotes = outputStrings();
 
     return (
-        <div>
+        <div id="window">
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (
