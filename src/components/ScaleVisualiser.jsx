@@ -18,17 +18,14 @@ function ScaleVisualiser() {
 
     function output_scales([tonic, pattern_type]) {
 
-        // Scales:
-        // 0: Ionian - 1: Dorian - 2: Phrygian - 3: Lydian - 4: Mixolydian - 5: Aeolian - 6: Locrian - 7: Harmonic Minor
-        // 8: Asc. Melodic Minor - 9: Pentatonic Major - 10: Pentatonic Minor - 11: Blues Scale 
-
         let root = ChromaticScale[tonic]
        
         const scales = [[2, 4, 5, 7, 9, 11], [2, 3, 5, 7, 9, 10], [1, 3, 5, 7, 8, 10], [2, 4, 6, 7, 9, 11], 
         [2, 4, 5, 7, 9, 10], [2, 3, 5, 7, 8, 10], [1, 3, 5, 6, 8, 10], [2, 4, 7, 9], [3, 5, 7, 10], [3, 5, 6, 7, 10], [2, 3, 5, 7, 8, 11], 
         [1, 3, 5, 6, 9, 10], [2, 4, 5, 8, 9, 11], [2, 3, 6, 7, 9, 10], [1, 4, 5, 7, 8, 10], [3, 4, 6, 7, 9, 11], [1, 3, 4, 6, 8, 9], [2, 3, 5, 7, 9, 11],
         [1, 3, 5, 7, 9, 10, 12], [2, 4, 6, 8, 9, 11, 12], [2, 4, 6, 7, 9, 10], [2, 4, 5, 7, 8, 10], [2, 3, 5, 6, 8, 10], [1, 3, 4, 6, 8, 10]]
-         // [2, 4, 5, 7, 9, 11]
+         // Major scale for reference when adding new scales: [2, 4, 5, 7, 9, 11]
+         
         let scale = []
         let start = root[0]
         scales[pattern_type].forEach((interval) => {

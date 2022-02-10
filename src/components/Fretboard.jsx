@@ -24,7 +24,7 @@ function Fretboard(props) {
     const stringNotes = outputStrings();
 
     return (
-        <div id="window">
+        <div class="fretboard-window" id="style-1">
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (

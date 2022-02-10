@@ -13,7 +13,7 @@ code {
     monospace;
 }
 
-#window {
+.fretboard-window {
   margin: auto;
   width: 830px;
   overflow-x: scroll;
@@ -21,7 +21,7 @@ code {
 
 .introduction {
   text-align: left;
-  color: white;
+  color: rgb(211, 211, 211);
   width: 650px;
   margin: auto;
 }
@@ -36,21 +36,26 @@ code {
 }
 
 h1 {
+  font-weight: 350;
   color: white;
   text-align: center;
 }
 
 h2 {
+  font-weight: 350;
   color: white;
   text-align: center;
 }
 
 .scale-arpeggio-type {
+  font-size: 1.3rem;
+  font-weight: 350;
   color: white;
   text-align: center;
 }
 
 h3 {
+  font-weight: 350;
   color: white;
   text-align: center;
 }
@@ -66,19 +71,27 @@ h3 {
 }
 
 .select-menu {
-  background-color: white;
-  height: 1.8rem;
+  font-size: 1.2rem;
+  background-color: rgb(220,220,220);
+  height: 2.2rem;
   border-radius: 5px;
+  border: 0px 5px 0px 0px;
 }
+
 
 .select-option-root {
   text-align: left;
-  background-color: white;
+  background-color: rgb(220,220,220);
   border-radius: 10px;
+  border: 0px 5px 0px 0px;
 }
 
 .submit-button {
+  background-color: rgb(220,220,220);
+  font-size: 1.2rem;
+  height: 2.2rem;
   width: 100px;
+  border: none;
   border-radius: 5px;
 }
 
@@ -95,7 +108,7 @@ h3 {
   align-content: center;
   flex-direction: column;
   font-size: 1rem;
-  background-color: rgb(17, 20, 219);
+  background-color: rgb(11, 35, 255);
   color: white;
   text-align: center;
   border-radius: 20px;
@@ -168,6 +181,28 @@ h3 {
   grid-gap: 16px;
 }
 
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 0px;
+	/* background-color: #F5F5F5; */
+  background-color: rgba(0, 0, 0, 0.875);
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+  border-radius: 0px;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
 .string {
   background-color: rgba(75, 73, 73, 0.55);
 }
@@ -181,7 +216,7 @@ h3 {
 
 .footer {
   text-align: center;
-  color: white;
+  color: rgb(211, 211, 211);
   margin: auto;
   margin-bottom: 15px;
 }
