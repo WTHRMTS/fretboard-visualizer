@@ -14,8 +14,8 @@ function App() {
                 If you're like me and have a bunch of books lying around which are full of scales and arpeggios but find them too cumbersome 
                 to use (just keeping the right page open while you're holding a guitar is hard enough), then this site is for you.
                 </p>
-                <p>On this page you can visualize
-                scales such as the Major, Minor or Harmonic Minor (and more), the modes of the Major scale, and all the common arpeggios (Major, Minor, 7th, Diminished 7th etc.)
+                <p>On this page you can visualize the Major, Minor, Harmonic Minor, the modes of the Major, Harmonic Minor and Melodic Minor 
+                    scales and all the common arpeggios (Major, Minor, 7th, Diminished 7th etc.)
                 in any key (in Standard Tuning, alternate tunings arriving soon!).
                 </p>
                 <p>
