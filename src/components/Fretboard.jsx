@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Fret from "./fret";
 import FretBoardMarker from "./fretboard-marker";
+import GuitarString from "./GuitarString";
 
 function Fretboard(props) {
     const flat = "\u266D"
@@ -12,19 +13,50 @@ function Fretboard(props) {
     // Need to change these to text, figure out why map wont work over strings, only empty strings.
     const fretBoardMarkers = [0, 1,2, 3,4, 5,6, 7,8, 9,10,11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
+    const stringNumbers = [0, 1, 2, 3, 4, 5]
+    // console.log(props.numberOfStrings)
+    // let stringNotes = [];
+    // const stringNumbers = [[[4],[11],[7],[2],[9],[4]], [[4],[11],[7],[2],[9],[4],[11]], [[4],[11],[7],[2],[9],[4],[11],[6]]]
+    // if (props.numberOfStrings == 0) {
+    //     stringNotes = [[4],[11],[7],[2],[9],[4]];
+    // } else if (props.numberOfStrings == 1) {
+    //     stringNotes = [[4],[11],[7],[2],[9],[4], [11]];
+    // } else if (props.numberOfStrings == 2) {
+    //     stringNotes = [[4],[11],[7],[2],[9],[4],[11],[6]];
+    // }
+    // let numberOfStrings = props.numberOfStrings;
+    
+
     function outputStrings() {
-        const stringNotes = [[4],[11],[7],[2],[9],[4]]
-        for (let j = 0; j < 6; j++){
+        // console.log("numberOfStrings=" + props.numberOfStrings);
+        const stringNotes = [[4],[11],[7],[2],[9],[4]];
+        if (props.numberOfStrings == 1) {
+            stringNotes.push([11]);
+            stringNumbers.push(6)
+        } else if (props.numberOfStrings == 2) {
+            stringNotes.push([11])
+            stringNotes.push([6])
+            stringNumbers.push([6])
+            stringNumbers.push([7])
+        }
+        // console.log(stringNotes)
+        // const stringNotes = [[4],[11],[7],[2],[9],[4]]
+        // const stringNotes = stringNumbers[props.numberOfStrings]
+        let index = stringNotes.length - 1;
+        console.log(stringNotes[index], props.dropTuned)
+        stringNotes[index][0] -= props.dropTuned;
+        for (let j = 0; j < stringNotes.length; j++){
             for (let i = 1; i< 25; i++) {
                 stringNotes[j].push((stringNotes[j][0]+i)%12)
             }
         }
+        // console.log(stringNotes)
         return stringNotes
     }
     const stringNotes = outputStrings();
 
     return (
-        <div class="fretboard-window" id="style-1">
+        <div className="fretboard-window" id="style-1">
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (
@@ -32,42 +64,7 @@ function Fretboard(props) {
                 ))
                 }
             </div>
-            <hr className="horizontal-lines"/>
-            <div className="fretboard-grid string">
-                {   stringNotes[0].map((note, index) => (
-                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-                ))}
-            </div>
-            <hr className="horizontal-lines" />
-            <div className="fretboard-grid string">
-                {   stringNotes[1].map((note, index) => (
-                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-                ))}
-            </div>
-            <hr className="horizontal-lines"/>
-            <div className="fretboard-grid string">
-                {  stringNotes[2].map((note, index) => (
-                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-                ))}
-            </div>
-            <hr className="horizontal-lines"/>
-            <div className="fretboard-grid string">
-                {   stringNotes[3].map((note, index) => (
-                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-                ))}
-            </div>
-            <hr className="horizontal-lines"/>
-            <div className="fretboard-grid string">
-                {   stringNotes[4].map((note, index) => (
-                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-                ))}
-            </div>
-            <hr className="horizontal-lines"/>
-            <div className="fretboard-grid string">
-                {   stringNotes[5].map((note, index) => (
-                        <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={ChromaticScale[note][1]}/>
-                ))}
-            </div>
+            {stringNumbers.map((stringNumber) => (<GuitarString key={stringNumber+1} stringNumber={stringNumber} stringNotes={stringNotes} highlightedNotes={props.highlightedNotes} ChromaticScale={ChromaticScale}/>))}
             <hr className="horizontal-lines"/>
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}

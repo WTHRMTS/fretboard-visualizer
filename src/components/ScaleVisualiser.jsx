@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 import Fretboard from "./Fretboard";
 
-function ScaleVisualiser() {
+function ScaleVisualiser(props) {
     const flat = "\u266D"
     const sharp = "\u266F"
     const natural = "\u266E"
+    // console.log("props.droptuned = " + props.dropTuned)
     const ChromaticScale = [[0, 'C'], [1, 'C'+sharp + '/D'+flat], [2, 'D'], [3, 'D'+sharp+'/E'+flat], [4, 'E'], [5, 'F'], [6, 'F'+ sharp + '/G'+flat], [7, 'G'] ,
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
 
@@ -78,7 +79,7 @@ function ScaleVisualiser() {
                 <button className="submit-button" onClick={HandleClick}>Submit</button>
             </div>
                 <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Scales[scaleType[1]]}</h3>
-            <Fretboard highlightedNotes={highlightedNotes}/>
+            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned}/>
         </div>
     )
 

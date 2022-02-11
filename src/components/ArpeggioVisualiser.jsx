@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Fretboard from "./Fretboard";
 
-function ArpeggioVisualiser() {
+function ArpeggioVisualiser(props) {
     const flat = "\u266D"
     const sharp = "\u266F"
     const natural = "\u266E"
@@ -75,7 +75,7 @@ function ArpeggioVisualiser() {
                 >Submit</button>
             </div>
             <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Arpeggios[scaleType[1]]}</h3>
-            <Fretboard highlightedNotes={highlightedNotes}/>
+            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned}/>
         </div>
     )
 
