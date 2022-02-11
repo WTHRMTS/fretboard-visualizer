@@ -5,16 +5,28 @@ import useToggle from "./useToggle";
 
 function App() {
     const [numberStrings, setNumberStrings] = useState([0])
-    // const [dropTuning, setDropTuning] = useState([false])
+    const [detune, setDetune] = useState([0])
     const [isOn, toggleIsOn] = useToggle();
 
-    // function handleClick() {
-    //     let setTuning = !dropTuning
-    //     console.log(dropTuning);
-    //     console.log(setTuning)
-    //     setDropTuning(setTuning);
-    //     console.log(dropTuning);
-    // }
+    function detuneSetter(event) {
+        let deTuneSteps = []
+        // console.log("event name= " + event.target.name);
+        // let numberOfStrings = parseInt(event.target.value)
+        if (event.target.value == "0 steps") {
+            deTuneSteps.push(0)
+        } else if (event.target.value == "half step") {
+            deTuneSteps.push(1)
+        } else if (event.target.value == "1 step") {
+            deTuneSteps.push(2);
+        } else if (event.target.value == "2 steps") {
+            deTuneSteps.push(4);
+        } else if (event.target.value == "3 steps") {
+            deTuneSteps.push(6);
+        }
+        console.log(deTuneSteps);
+        setDetune([deTuneSteps]);
+        console.log("number of steps detuned = " + detune);
+    }
 
     function handleChange(event) {
         let numStrings = []
@@ -69,11 +81,31 @@ function App() {
                 </select>
             </div>
             <div className="drop-tuning">
+            <label className="detuning-label" for="detuning">Detune: </label>
+
+            <select id="detuning" onChange={detuneSetter}>
+                    <option>
+                        0 steps
+                    </option>
+                    <option>
+                        half step
+                    </option>
+                    <option>
+                        1 step
+                    </option>
+                    <option>
+                        2 steps
+                    </option>
+                    <option>
+                        3 steps
+                    </option>
+                </select>
                 <label id="drop-tuning-label" for="drop-tuning">Drop Tuned?</label><span>   </span>
                 <input id="drop-tuning" type="checkbox" value="Test" onClick={toggleIsOn} />
+             
             </div>
-            <ScaleVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0}/>
-            <ArpeggioVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0}/>
+            <ScaleVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>
+            <ArpeggioVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>
             <div className="footer">&copy; Jamie Booth 2022</div>
 
         </div>

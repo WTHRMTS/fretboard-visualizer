@@ -5,7 +5,7 @@ function ScaleVisualiser(props) {
     const flat = "\u266D"
     const sharp = "\u266F"
     const natural = "\u266E"
-    // console.log("props.droptuned = " + props.dropTuned)
+    console.log(props.detune)
     const ChromaticScale = [[0, 'C'], [1, 'C'+sharp + '/D'+flat], [2, 'D'], [3, 'D'+sharp+'/E'+flat], [4, 'E'], [5, 'F'], [6, 'F'+ sharp + '/G'+flat], [7, 'G'] ,
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
 
@@ -13,7 +13,7 @@ function ScaleVisualiser(props) {
     
     const Scales = ['Major/Ionian', 'Dorian', 'Phyrgian', 'Lydian', 'Mixolydian', 'Minor/Aeolian', 'Locrian', 'Pentatonic Major', 'Pentatonic Minor', 'Blues Scale',
     'Harmonic Minor', 'Locrian '+ natural + '6', 'Ionian '+ sharp + '5' , 'Dorian ' + sharp + '11', 'Phrygian Dominant', 'Lydian '+ sharp + '2', 'Super Locrian '+ flat + flat + '7'
-    ,'Melodic Minor (Ascending)', 'Dorian '+ flat + '2', 'Lydian '+ sharp + '5', 'Lydian Dominant', 'Mixolydian ' + flat + '6', 'Aeolian '+ flat + '5', 'Altered Scale']
+    ,'Melodic Minor (Ascending)', 'Dorian '+ flat + '2', 'Lydian '+ sharp + '5', 'Lydian Dominant', 'Mixolydian ' + flat + '6', 'Aeolian '+ flat + '5', 'Altered Scale', 'Whole Tone Scale']
 
     let highlightedNotes = output_scales(scaleType)
 
@@ -24,7 +24,7 @@ function ScaleVisualiser(props) {
         const scales = [[2, 4, 5, 7, 9, 11], [2, 3, 5, 7, 9, 10], [1, 3, 5, 7, 8, 10], [2, 4, 6, 7, 9, 11], 
         [2, 4, 5, 7, 9, 10], [2, 3, 5, 7, 8, 10], [1, 3, 5, 6, 8, 10], [2, 4, 7, 9], [3, 5, 7, 10], [3, 5, 6, 7, 10], [2, 3, 5, 7, 8, 11], 
         [1, 3, 5, 6, 9, 10], [2, 4, 5, 8, 9, 11], [2, 3, 6, 7, 9, 10], [1, 4, 5, 7, 8, 10], [3, 4, 6, 7, 9, 11], [1, 3, 4, 6, 8, 9], [2, 3, 5, 7, 9, 11],
-        [1, 3, 5, 7, 9, 10, 12], [2, 4, 6, 8, 9, 11, 12], [2, 4, 6, 7, 9, 10], [2, 4, 5, 7, 8, 10], [2, 3, 5, 6, 8, 10], [1, 3, 4, 6, 8, 10]]
+        [1, 3, 5, 7, 9, 10, 12], [2, 4, 6, 8, 9, 11, 12], [2, 4, 6, 7, 9, 10], [2, 4, 5, 7, 8, 10], [2, 3, 5, 6, 8, 10], [1, 3, 4, 6, 8, 10],[2, 4, 6, 8, 10]]
          // Major scale for reference when adding new scales: [2, 4, 5, 7, 9, 11]
         
         let scale = []
@@ -79,7 +79,7 @@ function ScaleVisualiser(props) {
                 <button className="submit-button" onClick={HandleClick}>Submit</button>
             </div>
                 <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Scales[scaleType[1]]}</h3>
-            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned}/>
+            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned} detune={props.detune} origin={"ScaleVisualiser"}/>
         </div>
     )
 

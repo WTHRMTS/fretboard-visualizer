@@ -75,7 +75,7 @@ function ArpeggioVisualiser(props) {
                 >Submit</button>
             </div>
             <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Arpeggios[scaleType[1]]}</h3>
-            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned}/>
+            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned} detune={props.detune} origin={"ArpeggioVisualiser"}/>
         </div>
     )
 
