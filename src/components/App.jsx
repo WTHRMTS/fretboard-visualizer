@@ -7,6 +7,7 @@ function App() {
     const [numberStrings, setNumberStrings] = useState([0])
     const [detune, setDetune] = useState([0])
     const [isOn, toggleIsOn] = useToggle();
+    const [showHide, toggleShowHide] = useToggle();
 
     function detuneSetter(event) {
         let deTuneSteps = []
@@ -44,29 +45,44 @@ function App() {
         // console.log("number of strings from App.jsx = " + numberStrings);
     }
 
+    function showAdvancedOptions() {
+        var x = document.getElementById("advanced-options");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          x.value="Hide Advanced Options"
+        } else {
+          x.style.display = "none";
+        }
+      }
+
     return (
         <div>
-            <div className="introduction">
+            <div className="introduction" display="none">
                 <h1>Visualize Scales, Modes and Arpeggios</h1>
                 {/* <p>
                 If you're like me and have a bunch of books lying around which are full of scales and arpeggios but find them too cumbersome 
                 to use (just keeping the right page open while you're holding a guitar is hard enough), then this site is for you.
                 </p> */}
-                <p>On this page you can visualize the Major, Minor, Harmonic Minor, the modes of the Major, Harmonic Minor and Melodic Minor 
-                    scales and all the common arpeggios (Major, Minor, 7th, Diminished 7th etc.)
-                in any key, for either 6-, 7- or 8-string guitars.
+                <p>With this app you can visualize the Major, Minor and Harmonic Minor scales, as well as the modes of the Major, Harmonic Minor and Melodic Minor 
+                    scales (and more) and all the common arpeggios, i.e. Major, Minor, 7th, Diminished 7th etc.,
+                in any key all over the fretboard.
                 </p>
                 <p>
-                    
+                    Use the "Advanced Options" menu if you have a 7- or 8-string guitar, or if you want to select drop-tuning.
                 </p>
-                {/* <p>
-                For example: select the C Major Scale, and run through the C Major 7, D minor 7, E minor 7, F Major 7, G Dominant 7, A minor 7 and B Half Diminished 7 arpeggios, 
+                <p>
+                Example usage: select the C Major Scale, and run through the C Major 7, D minor 7, E minor 7, F Major 7, G Dominant 7, A minor 7 and B Half Diminished 7 arpeggios, 
                 and see that all of the notes in each arpeggio are contained in the C Major/Ionian Scale. 
                 </p>
                 <p> This is Diatonic Harmony, and tells you which chords you can safely use
                     together (there are others, but that is more advanced). Play around and learn!
-                </p> */}
+                </p>
             </div>
+            <div className="toggle-advanced-options">
+            <button className="toggle-advanced-options"  onClick={toggleShowHide}>Toggle Advanced Options</button>
+            </div>
+            
+            <div id="advanced-options" style={{display: showHide? "block" : "none"}}>
             <div className="string-select-area">
                 <select className="string-select" onChange={handleChange}>
                     <option name="Six">
@@ -81,7 +97,7 @@ function App() {
                 </select>
             </div>
             <div className="drop-tuning">
-            <label className="detuning-label" for="detuning">Detune: </label>
+            {/* <label className="detuning-label" for="detuning">Detune: </label>
 
             <select id="detuning" onChange={detuneSetter}>
                     <option>
@@ -99,10 +115,11 @@ function App() {
                     <option>
                         3 steps
                     </option>
-                </select>
-                <label id="drop-tuning-label" for="drop-tuning">Drop Tuned?</label><span>   </span>
+                </select> */}
+                <label id="drop-tuning-label" htmlFor="drop-tuning">Drop Tuned?</label><span>   </span>
                 <input id="drop-tuning" type="checkbox" value="Test" onClick={toggleIsOn} />
              
+            </div>
             </div>
             <ScaleVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>
             <ArpeggioVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>

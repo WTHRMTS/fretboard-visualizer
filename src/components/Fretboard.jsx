@@ -28,11 +28,12 @@ function Fretboard(props) {
             stringNumbers.push([7])
         }
        
-        console.log(props.detune, props.origin)
-        let testArr = stringNotes.map((stringNote) => [stringNote[0]-props.detune])
-        
-        console.log("detuned = " + testArr)
-        console.log(stringNotes)
+        // console.log(props.detune, props.origin)
+        // let testArr = stringNotes.map((stringNote) => {stringNote.map((note) => note[0]-props.detune))}
+        // let testArr = stringNotes.map((note)=>{note.map((notenum)=>{notenum = notenum-props.detune})})
+        // console.log(testArr)
+        // console.log("detuned = " + testArr)
+        // console.log(stringNotes)
         let index = stringNotes.length - 1;
         // console.log(stringNotes[index], props.dropTuned)
         stringNotes[index][0] -= props.dropTuned;
@@ -63,7 +64,6 @@ function Fretboard(props) {
                 ))
                 }
             </div>
-            
         </div>
     )
 

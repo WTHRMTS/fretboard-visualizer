@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 0.875);
+  /* background-color: rgba(33, 33, 33, 0.875); */
 }
 
 code {
@@ -65,9 +66,62 @@ h3 {
   justify-content: center;
   margin-bottom: 50px;
 }
+.toggle-advanced-options {
+  display: block;
+  height: 2.2rem;
+  font-size: 1.3rem;
+  border: 0px 0px 0px 0px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 50px auto 50px auto;
+}
 
+#advanced-options{
+  background-color: rgb(220,220,220);
+  border-radius: 15px;
+  background-color: rgba(42, 42, 42, 0.875);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 500px;
+  margin: auto;
+}
+
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+#drop-tuning-label {
+  font-size: 1.2rem;
+  height: 1.5rem;
+  color: white;
+}
 .label {
   color: white;
+}
+
+.string-select-area {
+  /* margin-top: 30px; */
+}
+
+.string-select {
+  font-size: 1.2rem;
+  display:block;
+  width: 40%;
+  height: 2.2rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 0px 5px 0px 0px;
+}
+
+.detuning-label {
+  color: #F5F5F5;
+}
+
+.drop-tuning {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 30px;
 }
 
 .select-menu {
@@ -170,6 +224,7 @@ h3 {
 }
 
 .fretboard-grid {
+  position: relative;
   align-items: center;
   align-content: center;
   margin: auto;
@@ -208,6 +263,7 @@ h3 {
 }
 
 .horizontal-lines {
+  /* display: none; */
   margin: auto;
   width: 1600px;
   margin-bottom: 0px;

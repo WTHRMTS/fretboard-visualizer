@@ -5,7 +5,6 @@ function ScaleVisualiser(props) {
     const flat = "\u266D"
     const sharp = "\u266F"
     const natural = "\u266E"
-    console.log(props.detune)
     const ChromaticScale = [[0, 'C'], [1, 'C'+sharp + '/D'+flat], [2, 'D'], [3, 'D'+sharp+'/E'+flat], [4, 'E'], [5, 'F'], [6, 'F'+ sharp + '/G'+flat], [7, 'G'] ,
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
 
@@ -62,8 +61,9 @@ function ScaleVisualiser(props) {
             </h2>
             <div className="input-area">
                 <select className="select-menu" onChange={handleChange} name="First">
-                    {ChromaticScale.map((scale) => ( 
+                    {ChromaticScale.map((scale, index) => ( 
                         <option 
+                        key={index}
                         className="select-option-root"
                         value={scale[0]}>{scale[1]}
                         </option> 
@@ -72,6 +72,7 @@ function ScaleVisualiser(props) {
                 <select className="select-menu" onChange={handleChange} name="Second">
                     {Scales.map((scale, index) => ( 
                         <option
+                        key={index}
                         className="select-option-scale"
                         value={index}>{scale}</option>
                      ))}

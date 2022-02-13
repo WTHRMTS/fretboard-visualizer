@@ -16,9 +16,6 @@ function ArpeggioVisualiser(props) {
 
     function output_arpeggios([tonic, pattern_type]) {
 
-        // Arpeggios
-        // 0: Major - 1: Minor - 2: Major 7th - 3: Minor 7th - 4: Dominant 7th - 5: Half Diminished 7th - 6: Diminished 7th
-
         let root = ChromaticScale[tonic]
 
         const arpeggios = [[4, 7], [3, 7], [4,7,11], [3, 7, 10], [4, 7, 10], [3, 6, 10], [3, 6, 9]]
@@ -57,8 +54,9 @@ function ArpeggioVisualiser(props) {
             </h2>
             <div className="input-area">
                 <select className="select-menu" onChange={handleChange} name="First">
-                    {ChromaticScale.map((scale) => (
+                    {ChromaticScale.map((scale, index) => (
                         <option
+                        key={index}
                         className="select-option-root"
                         value={scale[0]}>{scale[1]}</option>
                      ))}
@@ -66,6 +64,7 @@ function ArpeggioVisualiser(props) {
                 <select className="select-menu" onChange={handleChange} name="Second">
                     {Arpeggios.map((arpeggio, index) => (
                         <option
+                        key={index}
                         className="select-option-arpeggio"
                         value={index}>{arpeggio}</option>
                      ))}
