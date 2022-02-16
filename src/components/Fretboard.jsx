@@ -55,8 +55,10 @@ function Fretboard(props) {
                 ))
                 }
             </div>
+            <hr className="horizontal-lines-top"/>
+
             {stringNumbers.map((stringNumber) => (<GuitarString key={stringNumber+1} stringNumber={stringNumber} stringNotes={stringNotes} highlightedNotes={props.highlightedNotes} ChromaticScale={ChromaticScale}/>))}
-            <hr className="horizontal-lines"/>
+            <hr className="horizontal-lines-bottom"/>
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (

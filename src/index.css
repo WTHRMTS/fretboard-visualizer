@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 0.875);
+  /* background-color: rgb(255, 255, 255); */
+
   /* background-color: rgba(33, 33, 33, 0.875); */
 }
 
@@ -188,6 +190,7 @@ input[type=checkbox] {
 }
 
 .fret {
+  background-color: rgba(42, 42, 42, 0.875);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -203,16 +206,16 @@ input[type=checkbox] {
 .fret::after {
   content: "";
   position: absolute;
-  height: calc(100% + 16px);
-  width: 2px;
+  height: calc(100% + 6px);
+  width: 4px;
   background: rgb(138, 137, 137);
   right: -9px
 }
 .root-note-fret::after {
   content: "";
   position: absolute;
-  height: calc(100% + 16px);
-  width: 2px;
+  height: calc(100% + 6px);
+  width: 4px;
   background: rgb(138, 137, 137);
   right: -9px
 }
@@ -220,8 +223,8 @@ input[type=checkbox] {
 .highlighted-fret::after {
   content: "";
   position: absolute;
-  height: calc(100% + 16px);
-  width: 2px;
+  height: calc(100% + 6px);
+  width: 4px;
   background: rgb(138, 137, 137);
   right: -9px
 }
@@ -262,15 +265,45 @@ input[type=checkbox] {
 }
 
 .string {
-  background-color: rgba(75, 73, 73, 0.55);
+  background-color: rgba(75, 74, 73, 0.55);
+  /* background-color: rgba(190, 105, 20, 0.699); */
+
+  /* display: flex; */
+  /* justify-content: space-between; */
+  position: relative;
 }
 
-.horizontal-lines {
+.string::before {
+  content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: 1px solid rgb(138, 137, 137);
+    background: rgb(138, 137, 137);
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.horizontal-lines-top {
+  color: rgb(138, 137, 137);
+  border-top-width: 5px;
   /* display: none; */
   margin: auto;
   width: 1600px;
   margin-bottom: 0px;
   margin-top: 0px;
+  
+}
+
+.horizontal-lines-bottom {
+  color: rgb(138, 137, 137);
+  border-bottom-width: 5px;
+  /* display: none; */
+  margin: auto;
+  width: 1600px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  
 }
 
 .footer {

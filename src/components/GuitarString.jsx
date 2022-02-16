@@ -10,7 +10,7 @@ function GuitarString(props) {
 
     return (
             <div>
-                <hr className="horizontal-lines"/>
+                {/* <hr className="horizontal-lines"/> */}
                 <div className="fretboard-grid string">
                         {   props.stringNotes[props.stringNumber].map((note, index) => (
                                 <Fret key={index} className={note == props.highlightedNotes[0]? "root-note-fret" :  props.highlightedNotes[1].includes(note)? "highlighted-fret" : "fret"} content={<pre>{ChromaticScale[note][1]}</pre>}/>
