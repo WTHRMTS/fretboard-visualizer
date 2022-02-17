@@ -238,9 +238,11 @@ input[type=checkbox] {
   align-content: center;
   margin: auto;
   width: 1600px;
+  /* width: auto; */
   height: 2.3rem;
   display: grid;
   grid-template-columns: repeat(25, 1fr);
+  /* grid-template-columns: 50px 76px 72px 68px 64px 60px 57px 54px 51px 48px 43px 42px 40px 38px 36px 34px 32px 30px 28px 27px 26px 24px 22px 20px; */
   overflow: hidden;
   grid-gap: 16px;
 }
