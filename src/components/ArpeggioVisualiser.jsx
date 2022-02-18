@@ -10,7 +10,8 @@ function ArpeggioVisualiser(props) {
 
     let [scaleType, updateNotes] = useState([0,0])
     
-    const Arpeggios = ['Major', 'Minor', 'Major 7th', 'Minor 7th', 'Dominant 7th', 'Half Diminished 7th', 'Diminished 7th']
+    const Arpeggios = ['Major', 'Minor', 'Augmented', 'Major 7th', 'Minor 7th', 'Dominant 7th', 'Half Diminished 7th', 'Diminished 7th', 'Major 9', 'Minor 9', 'Dominant 9', 'Dominant 7'+flat+'9'
+                        ,'Dominant 7'+sharp+'5'+flat+'9', 'Dominant 7'+sharp+'5'+sharp+'9', 'Minor 9'+flat+'5', 'Major 9'+sharp+'5', 'Minor/Major 9']
 
     let highlightedNotes = output_arpeggios(scaleType)
 
@@ -18,7 +19,9 @@ function ArpeggioVisualiser(props) {
 
         let root = ChromaticScale[tonic]
 
-        const arpeggios = [[4, 7], [3, 7], [4,7,11], [3, 7, 10], [4, 7, 10], [3, 6, 10], [3, 6, 9]]
+        const arpeggios = [[4, 7], [3, 7], [4, 8], [4,7,11], [3, 7, 10], [4, 7, 10], [3, 6, 10], [3, 6, 9], [2, 4, 7, 11], [2, 3, 7, 10], [2, 4, 7, 10], [1, 4, 7, 10], [1, 4, 8, 10]
+                            , [3, 4, 8, 10], [2, 3, 6, 10], [2, 4, 8, 11], [2, 3, 7, 10]
+                            ]
 
         let scale = []
         let start = root[0]
@@ -35,6 +38,7 @@ function ArpeggioVisualiser(props) {
         }
         
         function handleChange(event) {
+            // This looks confusing but it just allows the use of one function for both select menus: Key and Arpeggio Type.
             let index
             
             if (event.target.name == "First") {

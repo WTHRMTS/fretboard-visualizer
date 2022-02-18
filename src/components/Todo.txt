@@ -1,13 +1,19 @@
-Style fretboard to make it slightly more realistic looking. Learn yo CSS!
+Refactor Scale and Arpeggio visualizer components so that select menus are components not explicit for both.
+
+
+
+---------------------------------------------------------------------------------------
+
+Style fretboard to make it slightly more realistic looking. Learn yo CSS! - Done...ish.
 
 Scales to Add:
 
-Harmonic Major and its modes: https://en.wikipedia.org/wiki/Harmonic_major_scale
+Harmonic Major and its modes: https://en.wikipedia.org/wiki/Harmonic_major_scale DONE
 
 
 Arpeggios to Add:
-All of those from here: https://jamplay.com/articles/5-guides/106-unusual-arpeggios-part-3
-and here: https://jamplay.com/articles/5-guides/105-unusual-arpeggios-part-2
+All of those from here: https://jamplay.com/articles/5-guides/106-unusual-arpeggios-part-3 DONE
+and here: https://jamplay.com/articles/5-guides/105-unusual-arpeggios-part-2 DONE
 
 
 
