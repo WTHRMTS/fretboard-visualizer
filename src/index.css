@@ -76,15 +76,18 @@ h3 {
 }
 
 #advanced-options{
-  background-color: rgb(220,220,220);
   border-radius: 15px;
   background-color: rgba(42, 42, 42, 0.875);
+  /* background-color: rgba(19, 197, 72, 0.775); */
   padding-top: 30px;
   padding-bottom: 30px;
   width: 500px;
   margin: auto;
 }
 
+.how-many-strings {
+  margin-top: 0px;
+}
 
 input[type=checkbox] {
   transform: scale(1.5);
@@ -101,14 +104,16 @@ input[type=checkbox] {
 
 .string-select {
   font-size: 1.2rem;
-  display:block;
-  width: 40%;
+  display: block;
+  width: 30%;
   height: 2.2rem;
   margin: 0 auto;
   border-radius: 5px;
   border: 0px 5px 0px 0px;
 }
-
+#detuning {
+  width: auto;
+}
 .detuning-label {
   color: #F5F5F5;
 }
@@ -116,6 +121,11 @@ input[type=checkbox] {
 .drop-tuning {
   text-align: center;
   font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.droptuning-area {
+  border-top: 30px;
   margin-top: 30px;
 }
 
@@ -203,7 +213,9 @@ input[type=checkbox] {
 }
 
 .open-string {
-  
+  font-size: 1rem;
+  padding-right: 0px;
+  margin-right: 5px;
 }
 
 .fret::after {
@@ -230,6 +242,16 @@ input[type=checkbox] {
   width: 4px;
   background: rgb(138, 137, 137);
   right: -9px
+}
+
+.open-string::after {
+  content: "";
+  border-right: solid 5px rgba(255, 255, 255, 0.6);
+  position: absolute;
+  height: calc(100% + 6px);
+  width: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  right: -9px;
 }
 
 .fretboard-grid {
@@ -288,7 +310,7 @@ input[type=checkbox] {
   border-color: rgb(138, 137, 137);
   border-top: 0px;
 
-  border-bottom-width: 5px;
+  border-bottom-width: 7px;
   padding-top: 0px;
   margin: auto;
   width: 1600px;

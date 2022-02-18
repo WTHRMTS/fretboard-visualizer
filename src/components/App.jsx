@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScaleVisualiser from "./ScaleVisualiser";
 import ArpeggioVisualiser from "./ArpeggioVisualiser";
 import useToggle from "./useToggle";
@@ -13,20 +13,36 @@ function App() {
         let deTuneSteps = []
         // console.log("event name= " + event.target.name);
         // let numberOfStrings = parseInt(event.target.value)
-        if (event.target.value == "0 steps") {
-            deTuneSteps.push(0)
-        } else if (event.target.value == "half step") {
-            deTuneSteps.push(1)
-        } else if (event.target.value == "1 step") {
-            deTuneSteps.push(2);
-        } else if (event.target.value == "2 steps") {
-            deTuneSteps.push(4);
-        } else if (event.target.value == "3 steps") {
-            deTuneSteps.push(6);
-        }
-        console.log(deTuneSteps);
-        setDetune([deTuneSteps]);
-        console.log("number of steps detuned = " + detune);
+        switch (event.target.value) {
+            case "0 Semitones":
+                deTuneSteps.push(0);
+                break;
+            case "1 Semitone":
+                deTuneSteps.push(1);
+                break;
+            case "2 Semitones":
+                deTuneSteps.push(2);
+                break;
+            case "3 Semitones":
+                deTuneSteps.push(3);
+                break;
+            case "4 Semitones":
+                deTuneSteps.push(4);
+                break;
+            case "5 Semitones":
+                deTuneSteps.push(5);
+                break;
+            case "6 Semitones":
+                deTuneSteps.push(6);
+                break;
+            case "7 Semitones":
+                deTuneSteps.push(7);
+                break;
+            case "8 Semitones":
+                deTuneSteps.push(8);
+                break;
+        }        
+        setDetune(deTuneSteps);
     }
 
     function handleChange(event) {
@@ -83,6 +99,7 @@ function App() {
             </div>
             
             <div id="advanced-options" style={{display: showHide? "block" : "none"}}>
+            <h2 className="how-many-strings">How Many Strings?</h2>
             <div className="string-select-area">
                 <select className="string-select" onChange={handleChange}>
                     <option name="Six">
@@ -96,29 +113,46 @@ function App() {
                     </option>
                 </select>
             </div>
+            <h2>Detune How Many Semitones?</h2>
             <div className="drop-tuning">
-            {/* <label className="detuning-label" for="detuning">Detune: </label>
-
-            <select id="detuning" onChange={detuneSetter}>
+            <div >
+                {/* <label className="detuning-label" htmlFor="detuning">Detune: </label>
+                <span>&nbsp;&nbsp;</span> */}
+                
+                <select id="detuning" className="select-menu" onChange={detuneSetter}>
                     <option>
-                        0 steps
+                        0 Semitones
                     </option>
                     <option>
-                        half step
+                        1 Semitone
                     </option>
                     <option>
-                        1 step
+                        2 Semitones
                     </option>
                     <option>
-                        2 steps
+                        3 Semitones
                     </option>
                     <option>
-                        3 steps
+                        4 Semitones
                     </option>
-                </select> */}
-                <label id="drop-tuning-label" htmlFor="drop-tuning">Drop Tuned?</label><span>   </span>
+                    <option>
+                        5 Semitones
+                    </option>
+                    <option>
+                        6 Semitones
+                    </option>
+                    <option>
+                        7 Semitones
+                    </option>
+                    <option>
+                        8 Semitones
+                    </option>
+                </select>
+            </div>
+            <div className="droptuning-area">
+                <label id="drop-tuning-label" htmlFor="drop-tuning">Drop Tuned?</label><span>&nbsp;&nbsp;</span>
                 <input id="drop-tuning" type="checkbox" value="Test" onClick={toggleIsOn} />
-             
+            </div>
             </div>
             </div>
             <ScaleVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>
