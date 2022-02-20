@@ -1,8 +1,9 @@
 Refactor Scale and Arpeggio visualizer components so that select menus are components not explicit for both.
 
-
-
 ---------------------------------------------------------------------------------------
+
+Refactor Advanced Options: DONE
+
 
 Style fretboard to make it slightly more realistic looking. Learn yo CSS! - Done...ish.
 

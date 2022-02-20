@@ -1,35 +1,24 @@
-import React, { useEffect, useState } from "react";
-import ScaleVisualiser from "./ScaleVisualiser";
-import ArpeggioVisualiser from "./ArpeggioVisualiser";
-import useToggle from "./useToggle";
-import Introduction from "./Introduction";
-import AdvancedOptions from "./AdvancedOptions";
+import React from "react";
 
-function App() {
-    const [numberStrings, setNumberStrings] = useState([0])
-    const [detune, setDetune] = useState([0])
-    const [isOn, toggleIsOn] = useToggle();
-    const [showHide, toggleShowHide] = useToggle();
+function AdvancedOptions(props) {
 
-    function stringSetter() {
-        setNumberStrings(() => [...[document.getElementById("string-select").selectedIndex]])
+    function settingDropTuned() {
+        props.setDropTuned()
+    }
+
+    function settingNumberOfStrings() {
+        props.setNumberStrings(() => [...[document.getElementById("string-select").selectedIndex]])
     }
 
     function detuneSetter() {
-        setDetune([document.getElementById("detuning").selectedIndex]);
+        props.setDetune([document.getElementById("detuning").selectedIndex]);
     }
 
     return (
-        <div>
-            <Introduction />
-            <div className="toggle-advanced-options">
-                <button className="toggle-advanced-options"  onClick={toggleShowHide}>Toggle Advanced Options</button>
-            </div>
-            
-            {/* <div id="advanced-options" style={{display: showHide? "block" : "none"}}>
+        <div id="advanced-options" style={{display: props.showHide? "block" : "none"}}>
                 <h2 className="how-many-strings">How Many Strings?</h2>
                 <div className="string-select-area">
-                    <select id="string-select" className="string-select" onChange={stringSetter}>
+                    <select id="string-select" className="string-select" onChange={settingNumberOfStrings}>
                         <option>
                             6 String Guitar
                         </option>
@@ -76,17 +65,12 @@ function App() {
                 </div>
                 <div className="droptuning-area">
                     <label id="drop-tuning-label" htmlFor="drop-tuning">Drop Tuned?</label><span>&nbsp;&nbsp;</span>
-                    <input id="drop-tuning" type="checkbox" value="Test" onClick={toggleIsOn} />
+                    <input id="drop-tuning" type="checkbox" value="Test" onClick={settingDropTuned} />
                 </div>
                 </div>
-            </div> */}
-            <AdvancedOptions showHide={showHide} numberOfStrings={numberStrings} setNumberStrings={setNumberStrings} detune={detune} setDetune={setDetune} dropTuned={isOn} setDropTuned={toggleIsOn}/>
-            <ScaleVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>
-            <ArpeggioVisualiser numberOfStrings={numberStrings} dropTuned={isOn? 2 : 0} detune={detune}/>
-            <div className="footer">&copy; Jamie Booth 2022</div>
-        </div>
+            </div>
     )
 
 }
 
-export default App;
+export default AdvancedOptions;
