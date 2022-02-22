@@ -19,6 +19,7 @@ function Fretboard(props) {
         // Instead of subtracting the detune amount, add 12, subtract detune then use that number modulo 12.
         // E.g. to detune F six semitones, add 12 to get 17, subtract 6 giving 11, then 11%12 gives 11.  
         // The last step seems redundant but it's needed as the detune might not always give a negative note value. So it corrects if it doesn't.
+        
         let stringNotes = [[(4+12-props.detune)%12],[(11+12-props.detune)%12],[(7+12-props.detune)%12],[(2+12-props.detune)%12],[(9+12-props.detune)%12],[(4+12-props.detune)%12]];
         if (props.numberOfStrings == 1) {
             stringNotes.push([(11+12-props.detune)%12]);
@@ -51,7 +52,6 @@ function Fretboard(props) {
                 }
             </div>
             <hr className="horizontal-lines-top"/>
-
             {stringNumbers.map((stringNumber) => (<GuitarString key={stringNumber+1} stringNumber={stringNumber} stringNotes={stringNotes} highlightedNotes={props.highlightedNotes} ChromaticScale={ChromaticScale}/>))}
             <hr className="horizontal-lines-bottom"/>
             <div className="fretboard-grid marker">
