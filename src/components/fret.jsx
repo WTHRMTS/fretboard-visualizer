@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import useToggle from "./useToggle";
 
 function Fret(props) {
+    const [highlight, setHighlight] = useToggle()
+
     return (
-        <div className={props.className}>
+        <div id={highlight? "clickNotHighlighted": "clickHighlighted"} onClick={setHighlight} className={props.className}>
             <span></span>
             {props.content}
         </div>

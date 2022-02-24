@@ -1,6 +1,8 @@
 import React from "react";
 import FretBoardMarker from "./fretboard-marker";
 import GuitarString from "./GuitarString";
+import Draggable from 'react-draggable';
+
 
 function Fretboard(props) {
     const flat = "\u266D"
@@ -42,6 +44,7 @@ function Fretboard(props) {
     }
     const stringNotes = outputStrings();
 
+
     return (
         <div className="fretboard-window" id="style-1">
             <div className="fretboard-grid marker">
@@ -51,6 +54,11 @@ function Fretboard(props) {
                 ))
                 }
             </div>
+            <Draggable bounds={{left: 0, right: 510}} axis = "x">
+                <div id="fretbox" className={props.numberOfStrings == 1? "draggable-7": props.numberOfStrings == 2? "draggable-8": "draggable"} style={{display: props.showHideBox? "block" : "none"}}>
+                    {/* Fretboard Window */}
+                </div>
+            </Draggable>
             <hr className="horizontal-lines-top"/>
             {stringNumbers.map((stringNumber) => (<GuitarString key={stringNumber+1} stringNumber={stringNumber} stringNotes={stringNotes} highlightedNotes={props.highlightedNotes} ChromaticScale={ChromaticScale}/>))}
             <hr className="horizontal-lines-bottom"/>

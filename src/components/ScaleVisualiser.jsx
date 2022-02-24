@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Fretboard from "./Fretboard";
+import useToggle from "./useToggle";
 
 function ScaleVisualiser(props) {
     const flat = "\u266D"
@@ -9,6 +10,7 @@ function ScaleVisualiser(props) {
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
 
     let [scaleType, updateNotes] = useState([0,0])
+    let [showHideBox, setShowHideBox] = useToggle(true)
     
     const Scales = ['Major/Ionian', 'Dorian', 'Phrygian', 'Lydian', 'Mixolydian', 'Minor/Aeolian', 'Locrian', 'Pentatonic Major', 'Pentatonic Minor', 'Blues Scale',
     'Harmonic Minor', 'Locrian '+ natural + '6', 'Ionian '+ sharp + '5' , 'Dorian ' + sharp + '11', 'Phrygian Dominant', 'Lydian '+ sharp + '2', 'Super Locrian '+ flat + flat + '7'
@@ -80,8 +82,12 @@ function ScaleVisualiser(props) {
                 </select>
                 <button className="submit-button" onClick={HandleClick}>Submit</button>
             </div>
+            <div className="fretboard-box">
+                <label id="fretboard-box-label" htmlFor="fretboard-box">Hide Fretboard Box?</label><span>&nbsp;&nbsp;</span>
+                <input id="fretboard-box" type="checkbox" value="Test" onClick={setShowHideBox}/>
+            </div>
                 <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Scales[scaleType[1]]}</h3>
-            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned} detune={props.detune} origin={"ScaleVisualiser"}/>
+            <Fretboard numberOfStrings={props.numberOfStrings} highlightedNotes={highlightedNotes} dropTuned={props.dropTuned} detune={props.detune} origin={"ScaleVisualiser"} showHideBox={showHideBox}/>
         </div>
     )
 
