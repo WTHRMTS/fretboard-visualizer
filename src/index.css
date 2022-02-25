@@ -211,9 +211,7 @@ input[type="checkbox"] {
 }
 
 #clickNotHighlighted {
-  color: rgb(170, 170, 170);
   background-color: rgba(42, 42, 42, 0.6);
-  border: 10px white;
 }
 
 .root-note-fret {
@@ -237,7 +235,8 @@ input[type="checkbox"] {
 .highlighted-fret {
   font-weight: 400;
   text-decoration-style: double;
-  color: white;
+  /* color: white; */
+  color: rgb(230, 230, 230);
   display: flex;
   justify-content: center;
   align-content: center;
