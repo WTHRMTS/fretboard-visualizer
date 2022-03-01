@@ -53,7 +53,7 @@ function ArpeggioVisualiser(props) {
         }
 
     return (
-        <div className="arpeggio visualiser">
+        <div className="visualiser">
             <h2>
                 Arpeggio Visualizer
             </h2>

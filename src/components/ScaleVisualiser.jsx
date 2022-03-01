@@ -60,7 +60,7 @@ function ScaleVisualiser(props) {
         }
 
     return (
-        <div className="scale visualiser">
+        <div className="visualiser">
             <h2>
                 Scale Visualizer
             </h2>
