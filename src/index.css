@@ -65,7 +65,7 @@ h3 {
 .input-area {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .toggle-advanced-options {
   display: block;
@@ -89,10 +89,6 @@ h3 {
 
 .how-many-strings {
   margin-top: 0px;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.5);
 }
 
 #drop-tuning-label {
@@ -173,8 +169,14 @@ input[type="checkbox"] {
 .fretboard-box {
   font-size: 1.5rem;
   color: rgb(211, 211, 211);
-  display: grid;
-  place-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
 }
 
 .marker {
