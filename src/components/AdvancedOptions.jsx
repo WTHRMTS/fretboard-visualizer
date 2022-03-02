@@ -33,7 +33,7 @@ function AdvancedOptions(props) {
                 <h2>Detune How Many Semitones?</h2>
                 <div className="drop-tuning">
                 <div >
-                    <select id="detuning" className="select-menu" onChange={detuneSetter}>
+                    <select id="detuning" className="select-menu-item" onChange={detuneSetter}>
                         <option>
                             0 Semitones
                         </option>

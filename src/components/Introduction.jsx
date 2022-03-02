@@ -1,10 +1,10 @@
 import React from "react"
 
-function Introduction() {
+function Introduction(props) {
 
     return (
-    <div className="introduction" display="none">
-                <h1>Visualize Scales, Modes and Arpeggios</h1>
+    <div className="introduction" style={{display: props.showIntro? "none" : "block"}}>
+                {/* <h1>Visualize Scales, Modes and Arpeggios</h1> */}
                 <p>
                     With this app you can visualize the Major, Minor and Harmonic Minor scales, as well as 
                     the modes of the Major, Harmonic Minor and Melodic Minor scales (and more) and all 

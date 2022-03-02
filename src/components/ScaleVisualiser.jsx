@@ -65,7 +65,7 @@ function ScaleVisualiser(props) {
                 Scale Visualizer
             </h2>
             <div className="input-area">
-                <select id="category-selected" className="select-menu" onChange={handleChange} name="First">
+                <select id="category-selected" className="select-menu-item" onChange={handleChange} name="First">
                     {ChromaticScale.map((scale, index) => ( 
                         <option 
                         key={index}
@@ -74,7 +74,7 @@ function ScaleVisualiser(props) {
                         </option> 
                      ))}
                 </select>
-                <select id="category-selected" className="select-menu" onChange={handleChange} name="Second">
+                <select id="category-selected" className="select-menu-item" onChange={handleChange} name="Second">
                     {Scales.map((scale, index) => ( 
                         <option
                         key={index}

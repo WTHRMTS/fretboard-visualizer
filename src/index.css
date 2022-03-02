@@ -39,6 +39,11 @@ h3 {
         Layout 
  ================*/
 
+.toggle-intro {
+  display: flex;
+  justify-content: center;
+}
+
 .introduction {
   text-align: left;
   color: rgb(211, 211, 211);
@@ -68,13 +73,23 @@ h3 {
   margin-bottom: 30px;
 }
 .toggle-advanced-options {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   height: 2.2rem;
   font-size: 1.3rem;
   border: 0px 0px 0px 0px;
   border-style: none;
   border-radius: 5px;
   margin: 50px auto 50px auto;
+}
+
+.toggle-button {
+  height: 2.2rem;
+  font-size: 1.3rem;
+  width: 25ch;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 #advanced-options {
@@ -136,12 +151,13 @@ h3 {
   background-color: rgba(42, 42, 42, 0.875);
 }
 
-.select-menu {
+.select-menu-item {
   font-size: 1.2rem;
   background-color: rgb(220, 220, 220);
   height: 2.2rem;
   border-radius: 5px;
   border: 0px 5px 0px 0px;
+  margin-right: 10px;
 }
 
 .select-option-root {
