@@ -13,14 +13,9 @@ function App() {
     const [intro, introToggle] = useToggle();
     const [showHide, toggleShowHide] = useToggle();
 
-    console.log(intro)
-
     return (
         <div>
             <Title />
-            <div className="toggle-intro">
-                
-            </div>
             <Introduction showIntro={intro}/>
             <div className="toggle-advanced-options">
                 <button className="toggle-button"  onClick={introToggle}>Toggle Instructions</button>

@@ -4,7 +4,6 @@ function Introduction(props) {
 
     return (
     <div className="introduction" style={{display: props.showIntro? "none" : "block"}}>
-                {/* <h1>Visualize Scales, Modes and Arpeggios</h1> */}
                 <p>
                     With this app you can visualize the Major, Minor and Harmonic Minor scales, as well as 
                     the modes of the Major, Harmonic Minor and Melodic Minor scales (and more) and all 
@@ -15,7 +14,7 @@ function Introduction(props) {
                     guitar up to 8 semitones, and use drop-tuning if required.
                 </p>
                 <p>
-                    Drag the yellow box around to highligh convenient "box" shapes, or hit the checkbox to hide it. 
+                    Drag the yellow box around to highlight convenient "box" shapes, or hit the checkbox to hide it. 
                     You can also click on highlighted notes (hide the fretboard box first) to remove the highlight, 
                     which can be used to create custom patterns, such as three note per string shapes etc.
                 </p>

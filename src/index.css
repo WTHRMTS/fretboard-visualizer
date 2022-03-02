@@ -21,6 +21,7 @@ h1 {
   font-weight: 350;
   color: white;
   text-align: center;
+  /* background-color: #555; */
 }
 
 h2 {
@@ -48,7 +49,10 @@ h3 {
   text-align: left;
   color: rgb(211, 211, 211);
   width: 75ch;
+  padding: 2ch 10ch;
   margin: auto;
+  background-color: rgba(42, 42, 42, 0.875);
+  border-radius: 15px;
 }
 
 .visualiser {
@@ -76,12 +80,11 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 2.2rem;
+  width: 800px;
   font-size: 1.3rem;
-  border: 0px 0px 0px 0px;
-  border-style: none;
   border-radius: 5px;
-  margin: 50px auto 50px auto;
+  margin: 20px auto;
+  /* background-color: rgba(42, 42, 42, 0.875); */
 }
 
 .toggle-button {
