@@ -18,6 +18,8 @@ code {
 }
 
 h1 {
+  font-size: 3.2rem;
+  padding: 50px 10px 0px 10px;
   font-weight: 350;
   color: white;
   text-align: center;
@@ -49,7 +51,7 @@ h3 {
   text-align: left;
   color: rgb(211, 211, 211);
   width: 75ch;
-  padding: 2ch 10ch;
+  padding: 1ch 4ch;
   margin: auto;
   background-color: rgba(42, 42, 42, 0.875);
   border-radius: 15px;
@@ -331,7 +333,7 @@ input[type="checkbox"] {
 
 .open-string::after {
   content: "";
-  border-right: solid 5px rgba(255, 255, 255, 0.6);
+  border-right: 5px rgba(255, 255, 255, 0.6) solid;
   position: absolute;
   height: calc(100% + 6px);
   width: 4px;
