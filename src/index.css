@@ -122,10 +122,13 @@ h3 {
 }
 
 .string-select {
+  background-color: rgb(220, 220, 220);
+
   font-size: 1.2rem;
   display: block;
-  width: 30%;
+  /* width: 30%; */
   height: 2.2rem;
+  padding: 0 1ch;
   margin: 0 auto;
   border-radius: 5px;
   border: 0px 5px 0px 0px;
@@ -161,6 +164,7 @@ h3 {
   font-size: 1.2rem;
   background-color: rgb(220, 220, 220);
   height: 2.2rem;
+  padding: 0 1ch;
   border-radius: 5px;
   border: 0px 5px 0px 0px;
   margin-right: 10px;
