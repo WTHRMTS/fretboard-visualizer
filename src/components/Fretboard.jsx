@@ -21,6 +21,8 @@ function Fretboard(props) {
         // Instead of subtracting the detune amount, add 12, subtract detune then use that number modulo 12.
         // E.g. to detune F six semitones, add 12 to get 17, subtract 6 giving 11, then 11%12 gives 11.  
         // The last step seems redundant but it's needed as the detune might not always give a negative note value. So it corrects if it doesn't.
+        // E.g. detuning B by 6 semitones: add 12 to get 23 then subtract 6 and you get 17, which is not in the chromatic scale. But 17%12 gives 5, 
+        // which is the correct note: F. So we have one algorithm for all notes and all detuning options.
         
         let stringNotes = [[(4+12-props.detune)%12],[(11+12-props.detune)%12],[(7+12-props.detune)%12],[(2+12-props.detune)%12],[(9+12-props.detune)%12],[(4+12-props.detune)%12]];
         if (props.numberOfStrings == 1) {

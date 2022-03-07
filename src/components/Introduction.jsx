@@ -5,9 +5,10 @@ function Introduction(props) {
     return (
     <div className="introduction" style={{display: props.showIntro? "none" : "block"}}>
                 <p>
-                    With this app you can visualize the Major, Minor and Harmonic Minor scales, as well as 
-                    the modes of the Major, Harmonic Minor and Melodic Minor scales (and more) and all 
-                    the common arpeggios, i.e. Major, Minor, 7th, Diminished 7th etc.,in any key all over the fretboard.
+                    With this app you can visualize the Major, Minor and Harmonic Major and Minor scales, as well as 
+                    their modes and more exotic scales like the 'Iwato Scale' in any key and all over the fretboard. The "Arpeggio
+                    Visualizer" section works identically but visualizes all common and some exotic arpeggios, 
+                    i.e. Major, Minor, 7th, Diminished 7th, 'Minor/Major 9' etc.
                 </p>
                 <p>
                     Hit the "Toggle Advanced Options" button to choose a 7-string or 8-string guitar fretboard, detune the 
