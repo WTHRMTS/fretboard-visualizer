@@ -92,7 +92,6 @@ h3 {
 
 .toggle-button {
   background-color: rgb(220, 220, 220);
-
   /* height: 2.2rem; */
   height: 3.2rem;
   font-size: 1.5rem;
@@ -201,8 +200,13 @@ h3 {
   margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
+
+#fretboard-box-label {
+  padding-right: 10px;
+}
+
 #fretboard-box-toggle {
   margin: 0;
 }

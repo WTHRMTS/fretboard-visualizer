@@ -79,7 +79,7 @@ function ArpeggioVisualiser(props) {
                 >Submit</button>
             </div>
             <div className="fretboard-box">
-                <label id="fretboard-box-label" htmlFor="fretboard-box">Hide Fretboard Box?</label><span>&nbsp;&nbsp;</span>
+                <label id="fretboard-box-label" htmlFor="fretboard-box">Hide Fretboard Box?</label>
                 <input id="fretboard-box" type="checkbox" value="Test" onClick={setShowHideBox}/>
             </div>
             <h3 className="scale-arpeggio-type">{ChromaticScale[scaleType[0]][1]} {Arpeggios[scaleType[1]]}</h3>
