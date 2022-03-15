@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useToggle from "./useToggle";
 
 function Fret(props) {

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ScaleVisualiser from "./ScaleVisualiser";
 import ArpeggioVisualiser from "./ArpeggioVisualiser";
 import useToggle from "./useToggle";
 import Title from "./Title";
 import Introduction from "./Introduction";
 import AdvancedOptions from "./AdvancedOptions";
+import Instructions from "./Instructions";
 
 function App() {
     const [numberStrings, setNumberStrings] = useState([0])
@@ -14,9 +15,10 @@ function App() {
     const [showHide, toggleShowHide] = useToggle();
 
     return (
-        <div>
+        <div className="App">
             <Title />
-            <Introduction showIntro={intro}/>
+            <Introduction />
+            <Instructions showIntro={intro}/>
             <div className="toggle-advanced-options">
                 <button className="toggle-button"  onClick={introToggle}>Toggle Instructions</button>
                 <button className="toggle-button"  onClick={toggleShowHide}>Toggle Advanced Options</button>

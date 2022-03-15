@@ -5,9 +5,11 @@ import Draggable from 'react-draggable';
 
 
 function Fretboard(props) {
+
     const flat = "\u266D"
     const sharp = "\u266F"
     const natural = "\u266E"
+
     const ChromaticScale = [[0, '  C  '], [1, 'C'+sharp + '/D'+flat], [2, '  D  '], [3, 'D'+sharp+'/E'+flat], [4, '  E  '], [5, '  F  '], [6, 'F'+ sharp + '/G'+flat], [7, '  G  '] ,
     [8, 'G'+ sharp + '/A' + flat], [9, '  A  '], [10, 'A' + sharp + '/B'+flat], [11, '  B  ']];
 
@@ -48,7 +50,7 @@ function Fretboard(props) {
 
 
     return (
-        <div className="fretboard-window" id="style-1">
+        <div className="fretboard-window" id={props.fretboardType}>
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (
