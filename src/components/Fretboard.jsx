@@ -48,13 +48,13 @@ function Fretboard(props) {
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (
-                    <FretBoardMarker key={index} content={fretBoardMarkers[marker]}/>
+                    <FretBoardMarker key={index} content={marker}/>
                 ))
                 }
             </div>
             <Draggable bounds={{left: 0, right: 510}} axis = "x">
-                <div id="fretbox" className={props.numberOfStrings == 1? "draggable-7": props.numberOfStrings == 2? "draggable-8": "draggable"} style={{display: props.showHideBox? "block" : "none"}}>
-                    {/* Fretboard Window */}
+                <div 
+                    id="fretbox" className={props.numberOfStrings == 1? "draggable-7": props.numberOfStrings == 2? "draggable-8": "draggable"} style={{display: props.showHideBox? "block" : "none"}}>
                 </div>
             </Draggable>
             <hr className="horizontal-lines-top"/>
@@ -63,7 +63,7 @@ function Fretboard(props) {
             <div className="fretboard-grid marker">
                 {/* Note the round brackets on the map callback function below!!! */}
                 {   fretBoardMarkers.map((marker, index) => (
-                    <FretBoardMarker key={index} content={fretBoardMarkers[marker]}/>
+                    <FretBoardMarker key={index} content={marker}/>
                 ))
                 }
             </div>
