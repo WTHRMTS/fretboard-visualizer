@@ -25,7 +25,7 @@ const Arpeggios = [
     , [3, 4, 8, 10], [2, 3, 6, 10], [2, 4, 8, 11], [2, 3, 7, 11]]
 ]
 
-// Cromatic Scale has slightly different layout as we don't need an index as well as the note number
+// Chromatic Scale has slightly different layout as we don't need an index as well as the note number
 
 const ChromaticScale = [[0, 'C'], [1, 'C'+sharp + '/D'+flat], [2, 'D'], [3, 'D'+sharp+'/E'+flat], [4, 'E'], [5, 'F'], [6, 'F'+ sharp + '/G'+flat], [7, 'G'] ,
     [8, 'G'+ sharp + '/A' + flat], [9, 'A'], [10, 'A' + sharp + '/B'+flat], [11, 'B']];
