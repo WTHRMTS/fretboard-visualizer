@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Arpeggios from "./Arpeggios";
+import {Arpeggios} from "./ScalesAndArpeggios";
 import ChromaticScale from "./ChromaticScale";
 import Fretboard from "./Fretboard";
 import useToggle from "./useToggle";

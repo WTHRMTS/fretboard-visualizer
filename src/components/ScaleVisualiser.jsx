@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Scales from "./Scales";
+import {Scales} from "./ScalesAndArpeggios";
 import ChromaticScale from "./ChromaticScale";
 import Fretboard from "./Fretboard";
 import useToggle from "./useToggle";
