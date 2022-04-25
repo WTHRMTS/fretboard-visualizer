@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Scales} from "./ScalesAndArpeggios";
-import ChromaticScale from "./ChromaticScale";
+import {ChromaticScale} from "./ScalesAndArpeggios";
 import Fretboard from "./Fretboard";
 import useToggle from "./useToggle";
 import exportAsImage from "../utils/exportAsImage";

@@ -40,9 +40,9 @@ h3 {
   text-align: left;
 }
 
-/* ===============
-        Layout 
- ================*/
+/* ===================================
+  Introduction and Instructions Layout 
+ =====================================*/
 
 .top-spacer {
   height: 50px;
@@ -82,21 +82,7 @@ h3 {
   padding: 1ch 4ch 1ch 4ch;
 }
 
-.visualiser {
-  margin-top: 50px;
-}
 
-.arpeggio {
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
-
-.scale-arpeggio-type {
-  font-size: 1.3rem;
-  font-weight: 350;
-  color: white;
-  text-align: center;
-}
 
 .input-area {
   display: flex;
@@ -124,6 +110,10 @@ h3 {
   border-radius: 5px;
   border: none;
 }
+
+/* =======================
+    Advanced Options Menu
+ =========================*/
 
 #advanced-options {
   border-radius: 15px;
@@ -177,6 +167,11 @@ h3 {
   margin-top: 30px;
 }
 
+
+/* =======================
+    Visualizer Area
+ =========================*/
+
 .visualiser {
   display: block;
   width: 900px;
@@ -184,6 +179,22 @@ h3 {
   padding: 20px 0px;
   border-radius: 15px;
   background-color: rgba(42, 42, 42, 0.875);
+}
+
+/* .visualiser {
+  margin-top: 50px;
+} */
+
+.arpeggio {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.scale-arpeggio-type {
+  font-size: 1.3rem;
+  font-weight: 350;
+  color: white;
+  text-align: center;
 }
 
 .select-menu-item {
@@ -260,6 +271,11 @@ input[type="checkbox"] {
   clear: both;
 }
 
+/* =======================================
+    Highlight Box. Different 
+    sizes for 6-, 7-, 8-String fretboard
+ =========================================*/
+
 .draggable {
   position: absolute;
   z-index: 1;
@@ -291,6 +307,10 @@ input[type="checkbox"] {
   width: 320px;
   resize: both;
 }
+
+/* =========================
+    Fret Styling
+ ===========================*/
 
 #clickNotHighlighted {
   background-color: rgba(42, 42, 42, 0.6);
@@ -388,6 +408,10 @@ input[type="checkbox"] {
   right: -9px;
 }
 
+/* =========================
+    Fretboard Styling
+ ===========================*/
+
 .fretboard-grid {
   position: relative;
   align-items: center;
@@ -438,6 +462,10 @@ input[type="checkbox"] {
   background-color: #555;
 }
 
+/* =========================
+    String Syling
+ ===========================*/
+
 .string {
   background-color: rgba(75, 74, 73, 0.55);
   position: relative;
@@ -453,6 +481,10 @@ input[type="checkbox"] {
   width: 100%;
   transform: translateY(-50%);
 }
+
+/* =========================
+    Fretboard Edges
+ ===========================*/
 
 .horizontal-lines-top {
   border-color: rgb(138, 137, 137);
@@ -475,6 +507,10 @@ input[type="checkbox"] {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+
+/* =========================
+    Save as Image Styling
+ ===========================*/
 
 .SaveAsImage {
   display: flex;

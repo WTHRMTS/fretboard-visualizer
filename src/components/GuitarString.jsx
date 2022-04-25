@@ -1,6 +1,6 @@
 import React from "react";
 import Fret from "./fret";
-import ChromaticScale from "./ChromaticScale";
+import {ChromaticScale} from "./ScalesAndArpeggios";
 
 function GuitarString(props) {
     return (

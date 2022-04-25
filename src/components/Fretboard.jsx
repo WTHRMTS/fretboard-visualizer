@@ -1,5 +1,5 @@
 import React from "react";
-import ChromaticScale from "./ChromaticScale";
+import {ChromaticScale} from "./ScalesAndArpeggios";
 import FretBoardMarker from "./fretboard-marker";
 import GuitarString from "./GuitarString";
 import Draggable from 'react-draggable';
@@ -7,13 +7,13 @@ import Draggable from 'react-draggable';
 
 function Fretboard(props) {
    
-    // Need to change these to text, figure out why map wont work over strings, only empty strings.
+    // Need to restyle?
     const fretBoardMarkers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
     const stringNumbers = [0, 1, 2, 3, 4, 5]
     
     function outputStrings() {
-        // Need to avoid negative note numbers hence the somewhat intricate expressions below. 
+        // Need to avoid negative note numbers when detuning hence the somewhat intricate expressions below. 
         // Instead of subtracting the detune amount, add 12, subtract detune then use that number modulo 12.
         // E.g. to detune F six semitones, add 12 to get 17, subtract 6 giving 11, then 11%12 gives 11.  
         // The last step seems redundant but it's needed as the detune might not always give a negative note value. So it corrects if it doesn't.
