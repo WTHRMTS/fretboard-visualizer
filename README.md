@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+            <h1>
+                Fretboard Visualizer
+            </h1>
+            <p>
+                With this application you can visualize the Major, Minor and Harmonic Major and Minor scales, as well as
+                their modes and more exotic scales like the 'Iwato Scale' in any key and all over the fretboard. The "Arpeggio
+                Visualizer" section works identically but visualizes all common and some exotic arpeggios,
+                i.e. Major, Minor, Major and Minor 7th, Diminished 7th, 'Minor/Major 9' etc.
+            </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+            <h3>
+                Instructions:
+            </h3>
+            <p>
+                Hit the "Toggle Advanced Options" button to choose a 7-string or 8-string guitar fretboard, detune the
+                guitar up to 8 semitones, and use drop-tuning if required.
+            </p>
+            <p>
+                Drag the yellow box around to highlight convenient "box" shapes, or hit the checkbox to hide it.
+                You can also click on highlighted notes (hide the fretboard box first) to remove the highlight,
+                which can be used to create custom patterns, such as three note per string shapes etc.
+            </p>
+            <p>
+                Hit the "Save As Image" button to save your custom patterns to a png file, which you can view on
+                your device at any time. This saves you recreating a pattern each time you want to use it.
+            </p>
+            <p>
+                Example usage: select the C Major Scale, and run through the C Major 7, D minor 7, E minor 7,
+                F Major 7, G Dominant 7, A minor 7 and B Half Diminished 7 arpeggios, and see that all of the
+                notes in each arpeggio are contained in the C Major/Ionian Scale.
+            </p>
+            <p> This is Diatonic Harmony, and tells you which chords you can safely use
+                together (there are others, but that is more advanced). Play around and learn!
+            </p>
