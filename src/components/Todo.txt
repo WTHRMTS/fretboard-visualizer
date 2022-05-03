@@ -1,5 +1,7 @@
 Refactor Scale and Arpeggio visualizer components so that select menus are components not explicit for both.
 
+In Firefox drop down menus have no highlight
+
 ---------------------------------------------------------------------------------------
 
 Refactor Advanced Options: DONE

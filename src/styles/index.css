@@ -201,9 +201,13 @@ h3 {
   margin-right: 10px;
 }
 
+select:hover {
+  background-color:rgb(161, 161, 161)
+}
+
 .select-option-root {
   text-align: left;
-  background-color: rgb(220, 220, 220);
+  /* background-color: rgb(223, 27, 27); */
   border-radius: 10px;
   border: 0px 5px 0px 0px;
 }
