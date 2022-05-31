@@ -11,7 +11,7 @@ function Fretboard(props) {
     const fretBoardMarkers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
     const stringNumbers = [0, 1, 2, 3, 4, 5]
-    
+    // console.log(props.numberOfStrings[0])
     function outputStrings() {
         // Need to avoid negative note numbers when detuning hence the somewhat intricate expressions below. 
         // Instead of subtracting the detune amount, add 12, subtract detune then use that number modulo 12.
@@ -21,10 +21,10 @@ function Fretboard(props) {
         // which is the correct note: F. So we have one algorithm for all notes and all detuning options.
         
         let stringNotes = [[(4+12-props.detune)%12],[(11+12-props.detune)%12],[(7+12-props.detune)%12],[(2+12-props.detune)%12],[(9+12-props.detune)%12],[(4+12-props.detune)%12]];
-        if (props.numberOfStrings == 1) {
+        if (props.numberOfStrings[0] === 1) {
             stringNotes.push([(11+12-props.detune)%12]);
             stringNumbers.push(6)
-        } else if (props.numberOfStrings == 2) {
+        } else if (props.numberOfStrings[0] === 2) {
             stringNotes.push([(11+12-props.detune)%12])
             stringNotes.push([(6+12-props.detune)%12])
             stringNumbers.push([6])
@@ -54,7 +54,7 @@ function Fretboard(props) {
             </div>
             <Draggable bounds={{left: 0, right: 510}} axis = "x">
                 <div 
-                    id="fretbox" className={props.numberOfStrings == 1? "draggable-7": props.numberOfStrings == 2? "draggable-8": "draggable"} style={{display: props.showHideBox? "block" : "none"}}>
+                    id="fretbox" className={props.numberOfStrings[0] === 1? "draggable-7": props.numberOfStrings[0] === 2? "draggable-8": "draggable"} style={{display: props.showHideBox? "block" : "none"}}>
                 </div>
             </Draggable>
             <hr className="horizontal-lines-top"/>
