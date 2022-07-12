@@ -37,11 +37,11 @@ function ArpeggioVisualiser(props) {
         function handleChange(event) {
             // This looks confusing but it just allows the use of one function for both select menus: Key and Arpeggio Type.
             let index
-            
-            if (event.target.name == "First") {
+
+            if (event.target.name === "First") {
                 index = 0;
             }
-            else if (event.target.name == "Second") {
+            else if (event.target.name === "Second") {
                 index = 1;
             }
             const dataValue = parseInt(event.target.value);
